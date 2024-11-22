@@ -39,6 +39,11 @@
             color: #0078d7;
             margin-bottom: 10px;
         }
+        section img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
         footer {
             text-align: center;
             padding: 10px 0;
@@ -48,12 +53,33 @@
             bottom: 0;
             width: 100%;
         }
+        ul {
+            margin-left: 20px;
+        }
         a {
             color: #0078d7;
             text-decoration: none;
         }
         a:hover {
             text-decoration: underline;
+        }
+        .screenshot {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px 0;
+            padding: 5px;
+            background: #f9f9f9;
+        }
+        .screenshot img {
+            max-width: 100%;
+            display: block;
+        }
+        .architecture {
+            background: #eef;
+            border: 1px solid #0078d7;
+            padding: 10px;
+            border-radius: 8px;
+            margin: 10px 0;
         }
     </style>
 </head>
@@ -65,37 +91,78 @@
     <section>
         <h2>About BiWi AI Tutor</h2>
         <p>
-            BiWi AI Tutor is an advanced chatbot designed to assist students in the
+            BiWi AI Tutor is a cutting-edge chatbot designed to assist students in the
             <strong>Bildungswissenschaften (BiWi)</strong> course at the <strong>University of Leipzig</strong>.
-            Leveraging cutting-edge language models and document retrieval systems, it provides precise answers to course-related queries,
-            enhancing the overall learning experience.
+            The AI leverages advanced language models, document embeddings, and retrieval systems to provide precise, context-aware responses.
         </p>
 
         <h2>Key Features</h2>
         <ul>
             <li>Intelligent Chatbot powered by LangChain and LangGraph.</li>
-            <li>Document Retrieval for context-aware responses.</li>
-            <li>Multi-model support, including OpenAI and Cohere integrations.</li>
-            <li>User-friendly web interface built with Streamlit.</li>
-            <li>Mentoring capabilities to support personalized learning.</li>
-        </ul>
-
-        <h2>How It Works</h2>
-        <p>
-            The chatbot processes course materials, stored as documents, to deliver meaningful responses. Students can interact with BiWi AI Tutor
-            through a <a href="http://localhost:8501" target="_blank">Streamlit interface</a> or via API endpoints for custom integration.
-        </p>
-
-        <h2>Why Choose BiWi AI Tutor?</h2>
-        <p>
-            Designed specifically for students in educational sciences, BiWi AI Tutor goes beyond simple Q&A systems by:
-        </p>
-        <ul>
-            <li>Providing real-time, contextually accurate answers.</li>
-            <li>Supporting mentoring roles set by teaching staff.</li>
-            <li>Enabling effortless integration with existing tools through APIs.</li>
+            <li>Document Retrieval using advanced embedding techniques.</li>
+            <li>Multi-model support, integrating OpenAI GPT-4 and Cohere Rerank.</li>
+            <li>Web interface built with Streamlit for an intuitive user experience.</li>
+            <li>Mentoring capabilities tailored for personalized student guidance.</li>
+            <li>Seamless integration with FastAPI for API-based interactions.</li>
         </ul>
     </section>
+
+    <section class="architecture">
+        <h2>System Architecture</h2>
+        <p>
+            The BiWi AI Tutor consists of several interconnected modules:
+        </p>
+        <ul>
+            <li><strong>Document Processor:</strong> Converts PDF course materials into searchable embeddings.</li>
+            <li><strong>Embedding Index:</strong> Stores semantic embeddings for fast retrieval.</li>
+            <li><strong>LangChain Core:</strong> Handles query parsing, retrieval, and model integration.</li>
+            <li><strong>Streamlit Frontend:</strong> A web interface for chatbot interactions.</li>
+            <li><strong>FastAPI Backend:</strong> Exposes endpoints for API-based integrations.</li>
+        </ul>
+        <img src="architecture.png" alt="System Architecture Diagram">
+        <p>Above is the high-level architecture of the BiWi AI Tutor system.</p>
+    </section>
+
+    <section>
+        <h2>Technical Details</h2>
+        <p>
+            BiWi AI Tutor uses an embedding-based retrieval mechanism. The core technical components include:
+        </p>
+        <ul>
+            <li><strong>LangChain:</strong> Handles conversational flow and tool usage.</li>
+            <li><strong>LangGraph:</strong> Visualizes the state of agent execution.</li>
+            <li><strong>Azure Integration:</strong> Enables hosting custom models securely.</li>
+            <li><strong>Streamlit Interface:</strong> Provides a web-based chat UI.</li>
+            <li><strong>FastAPI:</strong> Powers the backend for exposing RESTful endpoints.</li>
+        </ul>
+        <h3>Environment Setup</h3>
+        <p>
+            To run the project, ensure the following dependencies are installed:
+        </p>
+        <pre>
+Docker, Python 3.12, Streamlit, FastAPI
+        </pre>
+        <p>Use the following commands to set up:</p>
+        <pre>
+git clone https://github.com/your-repo/biwi-ai-tutor.git
+pip install -r requirements.txt
+python app.py
+        </pre>
+    </section>
+
+    <section>
+        <h2>Screenshots</h2>
+        <p>Here are some visuals of the BiWi AI Tutor in action:</p>
+        <div class="screenshot">
+            <img src="screenshot1.png" alt="Chatbot Home Screen">
+            <p><strong>Fig 1:</strong> The chatbot's main interface built with Streamlit.</p>
+        </div>
+        <div class="screenshot">
+            <img src="screenshot2.png" alt="Document Retrieval">
+            <p><strong>Fig 2:</strong> Query response with document references.</p>
+        </div>
+    </section>
+
     <footer>
         <p>© 2024 BiWi AI Tutor Team. All Rights Reserved.</p>
     </footer>
