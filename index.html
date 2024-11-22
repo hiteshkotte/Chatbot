@@ -3,9 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Page</title>
+    <title>BiWi AI Tutor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: #0078d7;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            margin: 5px 0;
+            font-size: 1.2em;
+        }
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+            color: #0078d7;
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        a {
+            color: #0078d7;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My GitHub Page!</h1>
-    <p>This is a simple website hosted on GitHub Pages.</p>
+    <header>
+        <h1>Welcome to BiWi AI Tutor</h1>
+        <p>Your intelligent learning companion for Bildungswissenschaften!</p>
+    </header>
+    <section>
+        <h2>About BiWi AI Tutor</h2>
+        <p>
+            BiWi AI Tutor is an advanced chatbot designed to assist students in the
+            <strong>Bildungswissenschaften (BiWi)</strong> course at the <strong>University of Leipzig</strong>.
+            Leveraging cutting-edge language models and document retrieval systems, it provides precise answers to course-related queries,
+            enhancing the overall learning experience.
+        </p>
+
+        <h2>Key Features</h2>
+        <ul>
+            <li>Intelligent Chatbot powered by LangChain and LangGraph.</li>
+            <li>Document Retrieval for context-aware responses.</li>
+            <li>Multi-model support, including OpenAI and Cohere integrations.</li>
+            <li>User-friendly web interface built with Streamlit.</li>
+            <li>Mentoring capabilities to support personalized learning.</li>
+        </ul>
+
+        <h2>How It Works</h2>
+        <p>
+            The chatbot processes course materials, stored as documents, to deliver meaningful responses. Students can interact with BiWi AI Tutor
+            through a <a href="http://localhost:8501" target="_blank">Streamlit interface</a> or via API endpoints for custom integration.
+        </p>
+
+        <h2>Why Choose BiWi AI Tutor?</h2>
+        <p>
+            Designed specifically for students in educational sciences, BiWi AI Tutor goes beyond simple Q&A systems by:
+        </p>
+        <ul>
+            <li>Providing real-time, contextually accurate answers.</li>
+            <li>Supporting mentoring roles set by teaching staff.</li>
+            <li>Enabling effortless integration with existing tools through APIs.</li>
+        </ul>
+    </section>
+    <footer>
+        <p>© 2024 BiWi AI Tutor Team. All Rights Reserved.</p>
+    </footer>
 </body>
+</html>
