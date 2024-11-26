@@ -65,93 +65,78 @@
     </nav>
     <section id="about">
     <h2>About the Chatbot</h2>
-    <p>
-        The <strong>BiWi AI Tutor</strong> is an advanced, AI-powered educational chatbot designed to address the challenges of 
-        scalable mentorship in higher education. Leveraging state-of-the-art <strong>Large Language Models (LLMs)</strong> and 
-        <strong>Retrieval-Augmented Generation (RAG)</strong>, the chatbot provides personalized, context-aware, and highly 
-        accurate responses tailored to students' individual needs.
-    </p>
-
-    <p>
-        At its core, the BiWi AI Tutor seamlessly integrates didactic principles with cutting-edge AI technologies to enhance the 
-        learning experience for students enrolled in the educational sciences. Unlike traditional rule-based or template-driven chatbots, 
-        which offer limited flexibility, this system adapts dynamically to student inquiries, whether they are related to course content, 
-        organizational matters, or self-directed learning guidance.
-    </p>
     
     <p>
-        The chatbot operates through a robust architecture that combines multiple layers of functionality:
+        Welcome to the <strong>BiWi AI Tutor</strong>, an intelligent chatbot designed to enhance learning experiences in higher education. 
+        Built with cutting-edge technologies, the chatbot provides personalized support to students in the field of educational sciences. 
+        Whether you need answers to course-related questions or guidance for self-directed learning, BiWi AI Tutor is here to help.
+    </p>
+
+    <h3>What Makes It Special?</h3>
+    <p>
+        The BiWi AI Tutor goes beyond simple question-answering. It combines advanced <strong>Large Language Models (LLMs)</strong> with 
+        <strong>Retrieval-Augmented Generation (RAG)</strong> to deliver accurate, context-aware responses. Think of it as your virtual 
+        mentor, ready to provide expert advice and learning support anytime, anywhere.
+    </p>
+
+    <h3>How It Works</h3>
+    <p>
+        The chatbot operates through a robust and intelligent workflow:
     </p>
     <ul>
         <li>
-            <strong>Document Parsing and Retrieval:</strong> Course materials, including lecture slides, seminar texts, and organizational 
-            information, are parsed and indexed using the <strong>LlamaIndex</strong> library. This allows the chatbot to access specific 
-            chunks of knowledge that are most relevant to a given query.
+            <strong>Understanding Your Query:</strong> The chatbot breaks down your question and determines the context, ensuring it 
+            fully understands what you need.
         </li>
         <li>
-            <strong>Contextual Understanding:</strong> By utilizing semantic search techniques and embedding-based retrieval, the chatbot 
-            ensures it delivers precise and relevant responses. A hybrid approach of keyword-based and semantic similarity-based retrievers 
-            further enhances the accuracy of the information retrieved.
+            <strong>Finding the Right Information:</strong> It retrieves relevant content from course materials such as lecture slides, 
+            seminar notes, and organizational documents.
         </li>
         <li>
-            <strong>RAG Workflow:</strong> The chatbot employs Retrieval-Augmented Generation to combine retrieved content with 
-            generative capabilities, creating comprehensive, contextually accurate answers. This technique ensures that students receive 
-            responses enriched by pre-existing learning materials while also leveraging the reasoning power of LLMs.
+            <strong>Providing Accurate Answers:</strong> Using advanced AI techniques, it generates clear, concise, and helpful 
+            responses tailored to your query.
         </li>
     </ul>
 
-    <p>
-        Students interact with the BiWi AI Tutor through a simple and intuitive web-based interface. Queries are processed through 
-        a pipeline that dynamically selects the most relevant learning material using retrievers and rerankers. These retrieved materials 
-        are then fed into the LLM, which generates detailed answers that are not only correct but also accompanied by explanations 
-        for deeper understanding.
-    </p>
+    <h3>Key Features</h3>
+    <ul>
+        <li><strong>Personalized Support:</strong> Receive answers and guidance based on your specific needs.</li>
+        <li><strong>24/7 Availability:</strong> Access learning support anytime, anywhere.</li>
+        <li><strong>Scalable Mentorship:</strong> Offers feedback and learning assistance for large student groups.</li>
+        <li><strong>Secure and Transparent:</strong> Protects your privacy while providing explainable answers.</li>
+    </ul>
 
+    <h3>Who Can Use It?</h3>
     <p>
-        The chatbot is equipped with the following advanced features:
+        The BiWi AI Tutor is ideal for students looking to:
     </p>
     <ul>
-        <li>
-            <strong>Multi-Model Integration:</strong> The system integrates models like OpenAI’s GPT-4, Cohere's reranker, and Azure-hosted 
-            AI services, ensuring flexibility and robustness in various deployment environments.
-        </li>
-        <li>
-            <strong>Iterative Query Handling:</strong> Through the use of LangChain’s Function Calling Agent, the chatbot can break down 
-            complex user queries into manageable sub-queries. This iterative approach ensures precise retrieval of context-sensitive 
-            information, even for multi-part questions.
-        </li>
-        <li>
-            <strong>Scalable Mentorship:</strong> Acting as both an expert and a mentor, the chatbot provides feedback on written tasks, 
-            encourages reflection, and promotes self-directed learning. This is especially valuable for large student cohorts, where 
-            traditional one-on-one mentorship may not be feasible.
-        </li>
-        <li>
-            <strong>Performance Optimization:</strong> The chatbot employs rerankers to prioritize the most relevant retrieved chunks 
-            of content, ensuring high-quality responses. The integration of these rerankers has significantly improved the accuracy of 
-            responses, particularly for organizational and factual queries.
-        </li>
+        <li>Understand complex topics from their courses.</li>
+        <li>Get quick answers to organizational questions like deadlines or schedules.</li>
+        <li>Receive feedback on self-directed learning activities.</li>
     </ul>
 
+    <h3>Performance You Can Trust</h3>
     <p>
-        Extensive evaluations of the BiWi AI Tutor demonstrate its effectiveness in addressing the diverse needs of students. Automated 
-        evaluations using GPT-4 revealed a high response correctness rate of up to <strong>87%</strong>, while human evaluations by expert 
-        annotators aligned closely with these results, showcasing the system’s reliability. For organizational queries, the chatbot achieved 
-        a perfect agreement score between human and automated evaluations.
+        The BiWi AI Tutor has been rigorously evaluated to ensure high-quality performance:
+    </p>
+    <ul>
+        <li>Achieved an <strong>87% correctness rate</strong> in automated evaluations using GPT-4.</li>
+        <li>Validated through human evaluations by domain experts for reliability and accuracy.</li>
+    </ul>
+
+    <h3>Secure and Reliable</h3>
+    <p>
+        Your data privacy is a top priority. All interactions with the BiWi AI Tutor are processed securely, and sensitive information 
+        is safeguarded. The chatbot is designed to provide transparent answers, so you can trust its guidance.
     </p>
 
     <p>
-        Privacy and security are at the forefront of the chatbot’s design. All interactions are securely processed, and sensitive data 
-        is safeguarded in compliance with strict privacy standards. Additionally, the chatbot is designed to provide transparent and 
-        explainable answers, empowering students to trust and rely on its guidance.
-    </p>
-
-    <p>
-        The BiWi AI Tutor represents a significant step forward in the integration of AI into education. By blending technological 
-        innovation with pedagogical expertise, it offers students a reliable, accessible, and engaging platform for learning. Whether 
-        addressing specific academic questions or providing mentorship-like support, this chatbot is a transformative tool for 
-        digital higher education.
+        With its blend of advanced technology and user-friendly design, the BiWi AI Tutor is transforming the way students 
+        engage with their learning materials. Try it today and experience a smarter way to learn!
     </p>
 </section>
+
     </section>
     <section id="features" class="features">
         <h2>Key Features</h2>
