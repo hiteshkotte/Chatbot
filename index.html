@@ -7,164 +7,91 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background: #f4f4f9;
-            color: #333;
+            background-color: #f9f9f9;
         }
         header {
-            background: #0078d7;
-            color: #fff;
-            padding: 20px 0;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
             text-align: center;
         }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        header p {
-            margin: 5px 0;
-            font-size: 1.2em;
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
         }
         section {
-            max-width: 800px;
-            margin: 20px auto;
-            background: #fff;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        section h2 {
-            color: #0078d7;
-            margin-bottom: 10px;
-        }
-        section img {
-            max-width: 100%;
+        .features, .technologies, .contact {
+            background-color: white;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 900px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-            margin-bottom: 10px;
         }
         footer {
             text-align: center;
-            padding: 10px 0;
-            background: #333;
-            color: #fff;
-            position: relative;
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem 0;
+            position: absolute;
             bottom: 0;
             width: 100%;
-        }
-        ul {
-            margin-left: 20px;
-        }
-        a {
-            color: #0078d7;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .screenshot {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            margin: 10px 0;
-            padding: 5px;
-            background: #f9f9f9;
-        }
-        .screenshot img {
-            max-width: 100%;
-            display: block;
-        }
-        .architecture {
-            background: #eef;
-            border: 1px solid #0078d7;
-            padding: 10px;
-            border-radius: 8px;
-            margin: 10px 0;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to BiWi AI Tutor</h1>
-        <p>Your intelligent learning companion for Bildungswissenschaften!</p>
+        <h1>BiWi AI Tutor</h1>
+        <p>Your Intelligent Mentor in Educational Science</p>
     </header>
-    <section>
-        <h2>About BiWi AI Tutor</h2>
-        <p>
-            BiWi AI Tutor is a cutting-edge chatbot designed to assist students in the
-            <strong>Bildungswissenschaften (BiWi)</strong> course at the <strong>University of Leipzig</strong>.
-            The AI leverages advanced language models, document embeddings, and retrieval systems to provide precise, context-aware responses.
-        </p>
-
+    <nav>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#technologies">Technologies</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="about">
+        <h2>About the Chatbot</h2>
+        <p>Placeholder for the introduction to the chatbot, its purpose, and its relevance in the educational sciences.</p>
+    </section>
+    <section id="features" class="features">
         <h2>Key Features</h2>
         <ul>
-            <li>Intelligent Chatbot powered by LangChain and LangGraph.</li>
-            <li>Document Retrieval using advanced embedding techniques.</li>
-            <li>Multi-model support, integrating OpenAI GPT-4 and Cohere Rerank.</li>
-            <li>Web interface built with Streamlit for an intuitive user experience.</li>
-            <li>Mentoring capabilities tailored for personalized student guidance.</li>
-            <li>Seamless integration with FastAPI for API-based interactions.</li>
+            <li>Personalized responses to course material questions</li>
+            <li>Mentorship-like support for self-directed learning</li>
+            <li>Scalable solution for large student cohorts</li>
         </ul>
     </section>
-
-    <section class="architecture">
-        <h2>System Architecture</h2>
-        <p>
-            The BiWi AI Tutor consists of several interconnected modules:
-        </p>
+    <section id="technologies" class="technologies">
+        <h2>Technologies Used</h2>
         <ul>
-            <li><strong>Document Processor:</strong> Converts PDF course materials into searchable embeddings.</li>
-            <li><strong>Embedding Index:</strong> Stores semantic embeddings for fast retrieval.</li>
-            <li><strong>LangChain Core:</strong> Handles query parsing, retrieval, and model integration.</li>
-            <li><strong>Streamlit Frontend:</strong> A web interface for chatbot interactions.</li>
-            <li><strong>FastAPI Backend:</strong> Exposes endpoints for API-based integrations.</li>
+            <li>Large Language Models (LLMs) like GPT-4</li>
+            <li>Retrieval Augmented Generation (RAG)</li>
+            <li>LangChain and LangGraph for enhanced interactions</li>
+            <li>Integration with Azure for scalable deployments</li>
         </ul>
-        <img src="architecture.png" alt="System Architecture Diagram">
-        <p>Above is the high-level architecture of the BiWi AI Tutor system.</p>
     </section>
-
-    <section>
-        <h2>Technical Details</h2>
-        <p>
-            BiWi AI Tutor uses an embedding-based retrieval mechanism. The core technical components include:
-        </p>
-        <ul>
-            <li><strong>LangChain:</strong> Handles conversational flow and tool usage.</li>
-            <li><strong>LangGraph:</strong> Visualizes the state of agent execution.</li>
-            <li><strong>Azure Integration:</strong> Enables hosting custom models securely.</li>
-            <li><strong>Streamlit Interface:</strong> Provides a web-based chat UI.</li>
-            <li><strong>FastAPI:</strong> Powers the backend for exposing RESTful endpoints.</li>
-        </ul>
-        <h3>Environment Setup</h3>
-        <p>
-            To run the project, ensure the following dependencies are installed:
-        </p>
-        <pre>
-Docker, Python 3.12, Streamlit, FastAPI
-        </pre>
-        <p>Use the following commands to set up:</p>
-        <pre>
-git clone https://github.com/your-repo/biwi-ai-tutor.git
-pip install -r requirements.txt
-python app.py
-        </pre>
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Placeholder for contact information or a form to reach out for more details.</p>
     </section>
-
-    <section>
-        <h2>Screenshots</h2>
-        <p>Here are some visuals of the BiWi AI Tutor in action:</p>
-        <div class="screenshot">
-            <img src="screenshot1.png" alt="Chatbot Home Screen">
-            <p><strong>Fig 1:</strong> The chatbot's main interface built with Streamlit.</p>
-        </div>
-        <div class="screenshot">
-            <img src="screenshot2.png" alt="Document Retrieval">
-            <p><strong>Fig 2:</strong> Query response with document references.</p>
-        </div>
-    </section>
-
     <footer>
-        <p>© 2024 BiWi AI Tutor Team. All Rights Reserved.</p>
+        <p>&copy; 2024 BiWi AI Tutor Team. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
