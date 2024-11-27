@@ -1,291 +1,377 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BiWi AI Tutor</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Verbesserung der Hochschulbildung durch Retrieval-Augmented Chatbots: Der BiWi AI Tutor</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
+            background-color: #f4f4f4;
             color: #333;
         }
-        header {
-            background-color: #d0e6f5;
-            color: #333;
-            text-align: center;
-            padding: 2rem 0;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #444;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-        }
-        nav a:hover {
-            background-color: #ddd;
-            color: #444;
-        }
-        section {
-            padding: 40px 20px;
-        }
-        .features, .technologies, .contact {
-            background-color: white;
-            margin: 20px auto;
-            padding: 40px;
+        .container {
+            width: 90%;
             max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #fff;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
         }
-        footer {
-            text-align: center;
-            background-color: #d0e6f5;
-            color: #333;
-            padding: 1.5rem 0;
+        h1, h2, h3 {
+            color: #2c3e50;
         }
-        footer div a {
-            margin: 0 10px;
-            color: #333;
-            font-size: 1.5rem;
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.8em;
+            border-bottom: 3px solid #2980b9;
+            padding-bottom: 10px;
+        }
+        h2 {
+            margin-top: 40px;
+            border-bottom: 2px solid #2980b9;
+            padding-bottom: 8px;
+            font-size: 2em;
+        }
+        h3 {
+            margin-top: 30px;
+            color: #34495e;
+            font-size: 1.5em;
+        }
+        p {
+            margin: 20px 0;
+            font-size: 1.1em;
+            color: #555;
+        }
+        ul, ol {
+            margin: 20px 40px;
+        }
+        li {
+            margin-bottom: 12px;
+            font-size: 1em;
+        }
+        code {
+            background-color: #ecf0f1;
+            padding: 2px 6px;
+            font-family: monospace;
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #ecf0f1;
+            padding: 15px;
+            overflow-x: auto;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        a {
+            color: #2980b9;
             text-decoration: none;
         }
-        footer div a:hover {
-            color: #007BFF;
+        a:hover {
+            text-decoration: underline;
         }
-        button:hover {
-            background-color: #45a049; /* Slightly darker green */
+        .keywords {
+            background-color: #2980b9;
+            color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+        .keywords h3 {
+            margin-top: 0;
+        }
+        .image-placeholder {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            margin: 30px auto;
+            display: block;
+            border: 2px solid #bdc3c7;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .image-placeholder img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .image-placeholder p {
+            text-align: center;
+            padding: 10px;
+            background-color: #bdc3c7;
+            color: #7f8c8d;
+            margin: 0;
+            font-size: 0.9em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 1em;
+        }
+        table th, table td {
+            border: 1px solid #bdc3c7;
+            padding: 12px;
+            text-align: center;
+        }
+        table th {
+            background-color: #2980b9;
+            color: #fff;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2.2em;
+            }
+            h2 {
+                font-size: 1.8em;
+            }
+            h3 {
+                font-size: 1.3em;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>BiWi AI Tutor</h1>
-        <p>Your Intelligent Mentor in Educational Science</p>
-    </header>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#features">Features</a>
-        <a href="#technologies">Technologies</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <div style="background-image: url('hero_image.jpg'); background-size: cover; background-position: center; height: 300px; width: 100%; margin-bottom: 20px; border-bottom: 5px solid #d0e6f5;">
-        <div style="text-align: center; color: white; font-family: 'Roboto', sans-serif; font-size: 2rem; padding-top: 100px; background-color: rgba(0, 0, 0, 0.4); height: 100%;">
-            <p>Empowering Learning with AI</p>
-        </div>
+
+<div class="container">
+
+    <h1>Verbesserung der Hochschulbildung durch Retrieval-Augmented Chatbots: Der BiWi AI Tutor</h1>
+
+    <p>In der modernen Hochschulbildung ist die Optimierung und Personalisierung des Lernprozesses von entscheidender Bedeutung. Besonders in komplexen Bereichen wie den Bildungswissenschaften können Technologien wie Large Language Models (LLMs) und Retrieval Augmented Generation (RAG) eine unterstützende Rolle spielen. Das Projekt <strong>BiWi AI Tutor</strong> zeigt, wie diese Technologien erfolgreich in Form eines KI-Chatbots eingesetzt werden können, um das Lernerlebnis für Studierende im Kurs <em>Bildungswissenschaften (BiWi)</em> an der Universität Leipzig zu verbessern.</p>
+
+    <h2>Über den BiWi AI Tutor Chatbot</h2>
+
+    <p>Der <strong>BiWi AI Tutor</strong> ist ein intelligenter Chatbot, der entwickelt wurde, um Studierende im Kurs der Bildungswissenschaften durch präzise, kontextbewusste Antworten auf ihre Fragen zu unterstützen. Er nutzt fortschrittliche Sprachmodelle und Dokumentenabrufsysteme, um das Lernerlebnis zu verbessern, selbstgesteuertes Lernen zu fördern und skalierbare Bildungsunterstützung zu bieten. Das öffentliche Code-Repository des Projekts ist <a href="https://gitlab.com/Tech4Comp/biwi-qa-system" target="_blank">hier</a> zugänglich.</p>
+
+    <h3>Verständnis von Large Language Models und Retrieval Augmented Generation</h3>
+
+    <p><strong>Large Language Models (LLMs)</strong> sind fortschrittliche KI-Systeme, die auf umfangreichen Textdaten trainiert wurden. Sie können menschliche Sprache verstehen und generieren, was sie in die Lage versetzt, sinnvolle Gespräche zu führen, Fragen zu beantworten und Erklärungen basierend auf den erhaltenen Eingaben zu liefern.</p>
+
+    <p><strong>Retrieval Augmented Generation (RAG)</strong> kombiniert traditionelle Dokumentenabruftechniken mit den generativen Fähigkeiten von LLMs. Dieser Ansatz ermöglicht es dem System, auf ein großes Dokumentenarchiv zuzugreifen und spezifische Informationen zu nutzen, um präzise und kontextuell relevante Antworten zu generieren. Dadurch sind die Antworten nicht nur kohärent, sondern auch fundiert und zuverlässig.</p>
+
+    <h3>Schlüsselfunktionen</h3>
+
+    <ul>
+        <li><strong>Intelligenter Chatbot:</strong> Nutzt LangChain und LangGraph, um komplexe Anfragen zu bearbeiten und nuancierte Antworten zu liefern.</li>
+        <li><strong>Dokumentenabruf:</strong> Ruft Kursmaterialien ab und verarbeitet diese, um kontextbewusste Antworten zu bieten.</li>
+        <li><strong>Unterstützung mehrerer Modelle:</strong> Integriert mehrere Modelle, einschließlich OpenAI's GPT-3.5-turbo für die Antwortgenerierung und GPT-4 für die Bewertung, sowie Cohere's Reranker-Modelle.</li>
+        <li><strong>Benutzerfreundliche Oberfläche:</strong> Bietet eine Chatbot-Oberfläche, die mit Mentoring Workbench erstellt wurde, für nahtlose Interaktionen.</li>
+        <li><strong>API-Zugang:</strong> Stellt Flask-basierte API-Endpunkte bereit, um den Chatbot in andere Anwendungen zu integrieren.</li>
+        <li><strong>Evaluierungstools:</strong> Enthält Skripte zur Bewertung der Leistung des Chatbots anhand vordefinierter Datensätze, die von Fachexperten erstellt wurden.</li>
+    </ul>
+
+    <h2>Verwendete Technologien</h2>
+
+    <p>Der BiWi AI Tutor wurde unter Verwendung einer Kombination aus modernsten Technologien und Tools entwickelt:</p>
+
+    <ul>
+        <li><strong>Sprachmodelle:</strong> Nutzt OpenAI's GPT-3.5-turbo für das Verständnis und die Generierung natürlicher Sprache sowie GPT-4 zur Bewertung der Antworten.</li>
+        <li><strong>LangChain und LangGraph:</strong> Rahmenwerke, die die Integration von Sprachmodellen mit verschiedenen Datenquellen und Tools erleichtern.</li>
+        <li><strong>Retrieval-Systeme:</strong> Implementiert hybride Abrufmechanismen unter Verwendung von Vektor-Embeddings und BM25-Indizes für eine effiziente Informationsbeschaffung.</li>
+        <li><strong>Cohere Reranker-Modelle:</strong> Setzt Cohere's Reranker-Modelle ein, um die Relevanz des abgerufenen Kontexts zu verbessern.</li>
+        <li><strong>Web-Technologien:</strong> Entwickelt mit Flask für API-Endpunkte und Mentoring Workbench für die Benutzeroberfläche, was eine reaktionsschnelle und benutzerfreundliche Erfahrung gewährleistet.</li>
+        <li><strong>Docker:</strong> Containerisierung mit Docker für eine einfache Bereitstellung und Skalierbarkeit.</li>
+    </ul>
+
+    <h2>Wie funktioniert der Chatbot?</h2>
+
+    <p>Der KI-basierte Chatbot nutzt fortschrittliche Sprachmodelle, die mit Retrieval Augmented Generation (RAG) Techniken verbessert wurden, um kontextbewusste und präzise Antworten auf die Fragen der Studierenden zu liefern. Der Prozess umfasst mehrere Schritte:</p>
+
+    <ol>
+        <li><strong>Fragenstellung:</strong> Studierende stellen eine Frage zu ihrem Kursmaterial, beispielsweise: "Was mache ich, wenn ich zur Prüfung krank bin?"</li>
+        <li><strong>Fragenverarbeitung:</strong> Die Frage wird in Vektor-Embeddings umgewandelt, wodurch sie für das LLM lesbar und analysierbar wird.</li>
+        <li><strong>Hybrider Abrufmechanismus:</strong> Der Chatbot verwendet sowohl semantischen Abruf als auch schlüsselwortbasierten Abruf, um in einer indexierten Datenbank von Kursmaterialien, einschließlich Vorlesungsfolien, Seminartexten und organisatorischen Dokumenten, zu suchen.</li>
+        <li><strong>Kontext-Reranking:</strong> Abgerufene Informationsabschnitte werden mithilfe eines Reranker-Modells neu bewertet, um den relevantesten Inhalt für die Anfrage des Nutzers zu priorisieren.</li>
+        <li><strong>Antwortgenerierung:</strong> Das LLM analysiert den verfeinerten Kontext und erstellt eine präzise, kontextuell angemessene Antwort.</li>
+    </ol>
+
+    <div class="image-placeholder">
+        <img src="images/biwibot1.png" alt="Chatbot UI mit Beispielkonversation">
+        <p>Abbildung 1: Chatbot-Oberfläche mit Beispielkonversation</p>
     </div>
-    <section id="about" style="background-color: #ffffff; padding: 40px; max-width: 900px; margin: 0 auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
-        <h2 style="text-align: center; font-family: 'Roboto', sans-serif; font-size: 2.5rem; color: #333; margin-bottom: 20px;">About the Chatbot</h2>
-        
-        <p style="text-align: justify; font-family: 'Roboto', sans-serif; font-size: 1.25rem; line-height: 1.8; color: #555;">
-            The <strong>BiWi AI Tutor</strong> is a cutting-edge intelligent chatbot designed to revolutionize the way students engage with learning materials in the field of educational sciences. Built on advanced <strong>Large Language Models (LLMs)</strong>, the chatbot leverages <strong>Retrieval-Augmented Generation (RAG)</strong> to deliver precise and context-aware answers tailored to individual queries.
-        </p>
-    
-        <p style="text-align: justify; font-family: 'Roboto', sans-serif; font-size: 1.25rem; line-height: 1.8; color: #555;">
-            Its primary goal is to support students in higher education by providing scalable, personalized mentorship and guidance. The chatbot serves as both a knowledgeable expert and a supportive learning companion, capable of addressing a wide range of inquiries, from course-specific content to organizational details.
-        </p>
-    
-        <p style="text-align: justify; font-family: 'Roboto', sans-serif; font-size: 1.25rem; line-height: 1.8; color: #555;">
-            Designed with self-directed learning in mind, the BiWi AI Tutor adapts to diverse learning contexts, offering timely feedback and fostering deeper engagement with course material. Whether answering questions about lecture slides, seminar texts, or organizational processes, the chatbot ensures students have the resources they need at their fingertips, 24/7.
-        </p>
-    
-        <p style="text-align: justify; font-family: 'Roboto', sans-serif; font-size: 1.25rem; line-height: 1.8; color: #555;">
-            The chatbot operates through a robust architecture that combines multiple layers of functionality. First, it parses and retrieves relevant course materials, including lecture slides, seminar texts, and organizational information, by indexing them with the <strong>LlamaIndex</strong> library. Next, it applies semantic search techniques and embedding-based retrieval to ensure the delivery of precise and relevant responses. Finally, the chatbot employs Retrieval-Augmented Generation (RAG) to combine retrieved content with generative capabilities, creating comprehensive, contextually accurate answers.
-        </p>
-    
-        <p style="text-align: justify; font-family: 'Roboto', sans-serif; font-size: 1.25rem; line-height: 1.8; color: #555;">
-            Students interact with the BiWi AI Tutor through a simple and intuitive web-based interface. Queries are processed through a pipeline that dynamically selects the most relevant learning material using retrievers and rerankers. These retrieved materials are then fed into the LLM, which generates detailed answers that are not only correct but also accompanied by explanations for deeper understanding.
-        </p>
-    </section>
-    <section id="features" class="features" style="background-color: #ffffff; padding: 40px; max-width: 900px; margin: 40px auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
-        <h2 style="text-align: center; font-family: 'Roboto', sans-serif; font-size: 2.5rem; color: #333; margin-bottom: 20px;">Key Features</h2>
-        
-        <div style="text-align: left; font-family: 'Roboto', sans-serif; font-size: 1.2rem; line-height: 1.8; color: #555;">
-            <p style="margin-bottom: 20px;">
-                The <strong>BiWi AI Tutor</strong> offers a range of innovative features designed to enhance learning and provide 
-                personalized support for students. Here are some of its standout capabilities:
-            </p>
-    
-            <div style="margin-bottom: 30px;">
-                <h3 style="font-size: 1.5rem; color: #333; margin-bottom: 10px;">
-                    <i class="fas fa-check-circle" style="color: #4CAF50; margin-right: 10px;"></i> Personalized Responses
-                </h3>
-                <p>
-                    The chatbot tailors its responses to each user's specific query, drawing from a rich repository of course materials. 
-                    Whether you're seeking clarification on lecture slides, seminar notes, or assignments, the BiWi AI Tutor delivers 
-                    accurate and context-aware answers customized to your needs.
-                </p>
-            </div>
-    
-            <div style="margin-bottom: 30px;">
-                <h3 style="font-size: 1.5rem; color: #333; margin-bottom: 10px;">
-                    <i class="fas fa-user-graduate" style="color: #4CAF50; margin-right: 10px;"></i> Mentorship-Like Support
-                </h3>
-                <p>
-                    Acting as a virtual mentor, the chatbot guides students through their learning journey by offering timely feedback 
-                    and actionable insights. It helps foster self-directed learning by encouraging students to reflect, plan, and 
-                    monitor their progress effectively.
-                </p>
-            </div>
-    
-            <div style="margin-bottom: 30px;">
-                <h3 style="font-size: 1.5rem; color: #333; margin-bottom: 10px;">
-                    <i class="fas fa-users" style="color: #4CAF50; margin-right: 10px;"></i> Scalable for Large Cohorts
-                </h3>
-                <p>
-                    Designed to handle the needs of large student groups, the BiWi AI Tutor ensures that every learner receives 
-                    personalized support without compromising on quality. Its scalability allows it to serve hundreds or even thousands 
-                    of students simultaneously, making it an invaluable resource in higher education settings.
-                </p>
-            </div>
-    
-            <div style="margin-bottom: 30px;">
-                <h3 style="font-size: 1.5rem; color: #333; margin-bottom: 10px;">
-                    <i class="fas fa-shield-alt" style="color: #4CAF50; margin-right: 10px;"></i> Secure and Transparent
-                </h3>
-                <p>
-                    The BiWi AI Tutor prioritizes data privacy and transparency. All interactions are securely processed, and students 
-                    can trust the chatbot to provide explainable and reliable answers. Its design ensures adherence to privacy standards 
-                    while offering a seamless user experience.
-                </p>
-            </div>
-    
-            <div style="margin-bottom: 30px;">
-                <h3 style="font-size: 1.5rem; color: #333; margin-bottom: 10px;">
-                    <i class="fas fa-lightbulb" style="color: #4CAF50; margin-right: 10px;"></i> Advanced AI Integration
-                </h3>
-                <p>
-                    Leveraging advanced technologies such as <strong>Large Language Models (LLMs)</strong> and <strong>Retrieval-Augmented Generation (RAG)</strong>, 
-                    the BiWi AI Tutor combines powerful generative and retrieval capabilities to deliver comprehensive and accurate 
-                    responses tailored to diverse student needs.
-                </p>
-            </div>
-        </div>
-    </section>
-    
-    <section id="technologies" class="technologies" style="background-color: #ffffff; padding: 40px; max-width: 900px; margin: 40px auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
-        <h2 style="text-align: center; font-family: 'Roboto', sans-serif; font-size: 2.5rem; color: #333; margin-bottom: 20px;">Technologies Used</h2>
-        
-        <div style="text-align: left; font-family: 'Roboto', sans-serif; font-size: 1.2rem; line-height: 1.8; color: #555;">
-            <p style="margin-bottom: 20px;">
-                The <strong>BiWi AI Tutor</strong> is built using a combination of advanced technologies that ensure scalability, precision, 
-                and seamless interaction. Below is an overview of the key technologies that power this intelligent chatbot:
-            </p>
-    
-            <div style="margin-bottom: 30px;">
-                <h3 style="font-size: 1.5rem; color: #333; margin-bottom: 10px;">
-                    <i class="fas fa-robot" style="color: #4CAF50; margin-right: 10px;"></i> Large Language Models (LLMs)
-                </h3>
-                <p>
-                    At the heart of the chatbot are state-of-the-art Large Language Models, such as GPT-4, which enable the generation 
-                    of human-like, context-aware responses. These models are trained on vast amounts of data to understand and process 
-                    complex user queries effectively.
-                </p>
-            </div>
-    
-            <div style="margin-bottom: 30px;">
-                <h3 style="font-size: 1.5rem; color: #333; margin-bottom: 10px;">
-                    <i class="fas fa-sync-alt" style="color: #4CAF50; margin-right: 10px;"></i> Retrieval-Augmented Generation (RAG)
-                </h3>
-                <p>
-                    The chatbot integrates Retrieval-Augmented Generation to enhance the accuracy and relevance of its answers. 
-                    This technology allows the system to retrieve information from a repository of course materials and combine it 
-                    with its generative capabilities to deliver precise, contextually enriched responses.
-                </p>
-            </div>
-    
-            <div style="margin-bottom: 30px;">
-                <h3 style="font-size: 1.5rem; color: #333; margin-bottom: 10px;">
-                    <i class="fas fa-code-branch" style="color: #4CAF50; margin-right: 10px;"></i> LangChain and LangGraph
-                </h3>
-                <p>
-                    The chatbot uses LangChain and LangGraph frameworks to streamline interaction workflows. These tools enable 
-                    the chatbot to execute complex queries by dynamically selecting the right tools, retrieving relevant information, 
-                    and responding in a multi-step conversational flow.
-                </p>
-            </div>
-    
-            <div style="margin-bottom: 30px;">
-                <h3 style="font-size: 1.5rem; color: #333; margin-bottom: 10px;">
-                    <i class="fas fa-cloud" style="color: #4CAF50; margin-right: 10px;"></i> Azure Integration
-                </h3>
-                <p>
-                    The BiWi AI Tutor is integrated with Microsoft Azure for scalability and cloud-based deployment. Azure ensures 
-                    high availability, fast performance, and secure hosting for the chatbot, making it capable of supporting large 
-                    student cohorts simultaneously.
-                </p>
-            </div>
-        </div>
-    </section>
-    
-    <section id="contact" class="contact" style="background-color: #ffffff; padding: 40px; max-width: 900px; margin: 40px auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
-        <h2 style="text-align: center; font-family: 'Roboto', sans-serif; font-size: 2.5rem; color: #333; margin-bottom: 20px;">Contact Us</h2>
-        
-        <p style="text-align: center; font-family: 'Roboto', sans-serif; font-size: 1.2rem; color: #555; margin-bottom: 30px;">
-            We'd love to hear from you! Please fill out the form below, and we'll get back to you as soon as possible.
-        </p>
-        
-        <form action="#" method="post" style="font-family: 'Roboto', sans-serif; font-size: 1rem; color: #555;">
-            <div style="margin-bottom: 20px;">
-                <label for="name" style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Name:</label>
-                <input 
-                    type="text" 
-                    id="name" 
-                    name="name" 
-                    placeholder="Your Name" 
-                    required 
-                    style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem;">
-            </div>
-    
-            <div style="margin-bottom: 20px;">
-                <label for="email" style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Email:</label>
-                <input 
-                    type="email" 
-                    id="email" 
-                    name="email" 
-                    placeholder="Your Email" 
-                    required 
-                    style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem;">
-            </div>
-    
-            <div style="margin-bottom: 20px;">
-                <label for="message" style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Message:</label>
-                <textarea 
-                    id="message" 
-                    name="message" 
-                    rows="4" 
-                    placeholder="Your Message" 
-                    required 
-                    style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem;"></textarea>
-            </div>
-    
-            <div style="text-align: center;">
-                <button 
-                    type="submit" 
-                    style="background-color: #4CAF50; color: white; padding: 10px 20px; font-size: 1.1rem; border: none; border-radius: 5px; cursor: pointer;">
-                    Send
-                </button>
-            </div>
-        </form>
-    </section>
-    
-    <footer>
-        <p>&copy; 2024 BiWi AI Tutor Team. All Rights Reserved.</p>
-        <div>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-        </div>
-    </footer>
+
+    <h2>Indexierung des Lernmaterials</h2>
+
+    <p>Die Effektivität des BiWi AI Tutors hängt stark von seiner Fähigkeit ab, relevante Kursmaterialien effizient abzurufen. Der Indexierungsprozess umfasst das Parsen von Kurs-PDFs in strukturierte Formate, das Aufteilen des Inhalts in handhabbare Abschnitte und das Erstellen sowohl semantischer als auch schlüsselwortbasierter Indizes. Dies stellt sicher, dass der Chatbot auf die relevantesten Teile des Kursmaterials zugreifen und diese nutzen kann, um genaue Antworten zu liefern.</p>
+
+    <div class="image-placeholder">
+        <img src="images/Block_Complete_2_v2.png" alt="Prozess der Lernmaterial-Indexierung">
+        <p>Abbildung 2: Prozess der Lernmaterial-Indexierung</p>
+    </div>
+
+    <h2>Interaktionsfluss des Chatbots</h2>
+
+    <p>Der Interaktionsfluss des Chatbots stellt sicher, dass Studierende genaue und zeitnahe Antworten erhalten. Vom Empfang einer Anfrage bis zur Generierung einer Antwort ist jeder Schritt sorgfältig darauf ausgelegt, Kontext und Relevanz aufrechtzuerhalten. Dieser Ablauf integriert die Indexierungs- und Abrufprozesse, um nahtlose und kontextuell reiche Interaktionen zu ermöglichen.</p>
+
+    <div class="image-placeholder">
+        <img src="images/Block_Complete_1_v2.png" alt="Interaktionsfluss des Chatbots">
+        <p>Abbildung 3: Interaktionsfluss des Chatbots</p>
+    </div>
+
+    <h2>Evaluierung des Chatbots</h2>
+
+    <p>Der BiWi AI Tutor wurde rigoros evaluiert, um seine Effektivität und Zuverlässigkeit sicherzustellen. Der Evaluierungsprozess umfasste sowohl automatisierte als auch manuelle Bewertungen:</p>
+
+    <h3>Manuelle Bewertung durch menschliche Gutachter</h3>
+
+    <p>Fünf menschliche Gutachter, alle Fachexperten und Kursleiter, bewerteten unabhängig voneinander die Antworten des Chatbots auf einen Satz von 60 Fragen. Jede Antwort wurde als korrekt oder inkorrekt bewertet, und die Mehrheitsentscheidung der Gutachter lieferte ein Konsensurteil.</p>
+
+    <h4>Bewertungsergebnisse</h4>
+    <table>
+        <tr>
+            <th>Kategorie</th>
+            <th>Gesamtanzahl Fragen</th>
+            <th>Korrekte Antworten (Mehrheitsentscheidung)</th>
+        </tr>
+        <tr>
+            <td>Vorlesung</td>
+            <td>20</td>
+            <td>16 (80%)</td>
+        </tr>
+        <tr>
+            <td>Seminar</td>
+            <td>20</td>
+            <td>15 (75%)</td>
+        </tr>
+        <tr>
+            <td>Organisatorisch</td>
+            <td>20</td>
+            <td>17 (85%)</td>
+        </tr>
+    </table>
+
+    <h3>Automatisierte Bewertung mit GPT-4</h3>
+
+    <p>Die zweite Bewertungsmethode nutzte das GPT-4 Modell von OpenAI, um die Korrektheit der Antworten des Chatbots zu beurteilen. Die GPT-4-Bewertung spiegelte die menschliche Einschätzung genau wider und bot eine automatisierte Möglichkeit zur Überprüfung der Antwortgenauigkeit.</p>
+
+    <h4>Bewertungsergebnisse</h4>
+    <table>
+        <tr>
+            <th>Kategorie</th>
+            <th>Gesamtanzahl Fragen</th>
+            <th>Korrekte Antworten (GPT-4)</th>
+        </tr>
+        <tr>
+            <td>Vorlesung</td>
+            <td>20</td>
+            <td>17 (85%)</td>
+        </tr>
+        <tr>
+            <td>Seminar</td>
+            <td>20</td>
+            <td>15 (75%)</td>
+        </tr>
+        <tr>
+            <td>Organisatorisch</td>
+            <td>20</td>
+            <td>17 (85%)</td>
+        </tr>
+    </table>
+
+    <h4>Vergleich und Analyse</h4>
+    <p>Der Vergleich zwischen den Mehrheitsentscheidungen der menschlichen Gutachter und den Bewertungen von GPT-4 zeigte eine enge Übereinstimmung, insbesondere bei organisatorischen Fragen, bei denen beide Bewertungen eine Korrektheitsrate von 85% erreichten.</p>
+    <table>
+        <tr>
+            <th>Kategorie</th>
+            <th>Gesamtanzahl Fragen</th>
+            <th>Korrekte Antworten (GPT-4)</th>
+            <th>Korrekte Antworten (Mehrheitsentscheidung)</th>
+        </tr>
+        <tr>
+            <td>Vorlesung</td>
+            <td>20</td>
+            <td>17 (85%)</td>
+            <td>16 (80%)</td>
+        </tr>
+        <tr>
+            <td>Seminar</td>
+            <td>20</td>
+            <td>15 (75%)</td>
+            <td>15 (75%)</td>
+        </tr>
+        <tr>
+            <td>Organisatorisch</td>
+            <td>20</td>
+            <td>17 (85%)</td>
+            <td>17 (85%)</td>
+        </tr>
+    </table>
+
+    <h3>Auswirkung der Verwendung von Rerankern</h3>
+
+    <p>Die Integration von Reranker-Modellen verbesserte die Leistung des Chatbots erheblich. Insbesondere verbesserte der Reranking-Mechanismus die Genauigkeit der Antworten bei organisatorischen Fragen, indem eine Korrektheitsrate von 100% erreicht wurde. Diese Verbesserung unterstreicht die Effektivität von Rerankern bei der Filterung und Priorisierung des relevantesten Kontexts zur Generierung genauer Antworten.</p>
+
+    <table>
+        <tr>
+            <th>Kategorie</th>
+            <th>Gesamtanzahl Fragen</th>
+            <th>GPT-3.5-turbo (Ohne Reranker)</th>
+            <th>GPT-3.5-turbo (Mit Reranker)</th>
+        </tr>
+        <tr>
+            <td>Seminar</td>
+            <td>20</td>
+            <td>15 (75%)</td>
+            <td>16 (80%)</td>
+        </tr>
+        <tr>
+            <td>Vorlesung</td>
+            <td>20</td>
+            <td>17 (85%)</td>
+            <td>16 (80%)</td>
+        </tr>
+        <tr>
+            <td>Organisatorisch</td>
+            <td>20</td>
+            <td>17 (85%)</td>
+            <td>20 (100%)</td>
+        </tr>
+    </table>
+
+    <h2>Vorteile für Studierende und Lehrende</h2>
+
+    <p>Chatbots wie der BiWi AI Tutor bieten verschiedene Vorteile für das Lehren und Lernen an Universitäten. Für Studierende bedeutet dies:</p>
+
+    <ul>
+        <li><strong>Personalisierte Lernunterstützung:</strong> Studierende können individuelle Fragen stellen und erhalten maßgeschneiderte Antworten, die auf ihre spezifischen Lernbedürfnisse eingehen.</li>
+        <li><strong>Kontextualisierte Antworten:</strong> Der Chatbot liefert kontextbewusste Antworten, indem er vorhandene Lernmaterialien integriert, was die Relevanz und Genauigkeit der Informationen erhöht.</li>
+        <li><strong>Flexibilität und Skalierbarkeit:</strong> Der Chatbot ist jederzeit verfügbar und bietet über eine webbasierte Oberfläche Zugang zu wichtigen Informationen, wodurch Studierende unabhängig von ihrem Standort unterstützt werden.</li>
+    </ul>
+
+    <p>Für Lehrende bringt die Kombination von LLMs und RAG folgende Vorteile:</p>
+
+    <ul>
+        <li><strong>Skalierbare Bildungsunterstützung:</strong> Der Chatbot kann gleichzeitig zahlreiche Anfragen bearbeiten und bietet zeitnahe Unterstützung, ohne die Lehrkräfte zu überlasten.</li>
+        <li><strong>Einblick in die Bedürfnisse der Studierenden:</strong> Durch die Analyse häufiger Fragen können Lehrende Bereiche identifizieren, in denen Studierende Schwierigkeiten haben, und ihre Lehrmethoden entsprechend anpassen.</li>
+        <li><strong>Verbesserte Kursdurchführung:</strong> Die Integration von KI-Tools kann das Lernerlebnis bereichern und die Kurse interaktiver und ansprechender gestalten.</li>
+    </ul>
+
+    <h2>Herausforderungen beim Einsatz von LLMs</h2>
+
+    <p>Trotz der vielen Vorteile und Möglichkeiten, die Chatbots und andere KI-basierte Lernsysteme bieten, gibt es auch Herausforderungen, die berücksichtigt werden müssen:</p>
+
+    <ul>
+        <li><strong>Ressourcenintensiv:</strong> Der Betrieb solcher Systeme erfordert erhebliche Rechenleistung und verursacht Kosten, die mit der Verarbeitung und Wartung großer Modelle verbunden sind.</li>
+        <li><strong>Abhängigkeit von Anbietern:</strong> Viele dieser Systeme sind auf Schnittstellen zu externen Anbietern wie OpenAI und Cohere angewiesen, was die Autonomie der Bildungseinrichtungen einschränken kann.</li>
+        <li><strong>Qualität der Antworten:</strong> KI-Systeme liefern nicht immer korrekte Ergebnisse. Es kann zu "Halluzinationen" (falschen oder unsinnigen Antworten) kommen. Die Sicherstellung der Genauigkeit der Antworten und die Minimierung von Verzerrungen, die in den Trainingsdaten vorhanden sind, sind unerlässlich.</li>
+        <li><strong>Datenschutzbedenken:</strong> Der Umgang mit Studentendaten erfordert die strikte Einhaltung von Datenschutzbestimmungen, um sensible Informationen zu schützen.</li>
+    </ul>
+
+    <h2>Fazit</h2>
+
+    <p>Das Projekt BiWi AI Tutor zeigt, wie der Einsatz von LLMs und RAG die Hochschulbildung unterstützen kann. Durch die Integration dieser Technologien können Lernprozesse nicht nur effizienter, sondern auch flexibler und gezielter gestaltet werden.</p>
+
+    <p>Durch den Einsatz fortschrittlicher KI-Modelle und innovativer Abrufmethoden gewinnen sowohl Studierende als auch Lehrende neue und effektive Möglichkeiten zur Verbesserung des Lernens und Lehrens. Die Zukunft der Bildung wird somit personalisierter, skalierbarer und jederzeit zugänglich.</p>
+
+</div>
+
 </body>
 </html>
