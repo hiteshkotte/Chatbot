@@ -3,44 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>Enhancing Higher Education with Retrieval-Augmented Chatbots: The BiWi AI Tutor</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Styles -->
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.7;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
             color: #333;
         }
         .container {
             width: 90%;
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 30px;
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 40px;
             background: #fff;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+            /* Removed box-shadow and border-radius for a flat container */
+            /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+            /* border-radius: 10px; */
         }
         h1, h2, h3 {
-            color: #2c3e50;
+            font-family: 'Lora', serif;
+            color: #222;
         }
         h1 {
             text-align: center;
-            margin-bottom: 20px;
-            font-size: 2.8em;
-            border-bottom: 3px solid #2980b9;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            font-weight: 700;
+            border-bottom: 2px solid #e0e0e0;
             padding-bottom: 10px;
         }
         h2 {
-            margin-top: 40px;
-            border-bottom: 2px solid #2980b9;
-            padding-bottom: 8px;
+            margin-top: 60px;
+            margin-bottom: 20px;
             font-size: 2em;
+            font-weight: 700;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 5px;
         }
         h3 {
-            margin-top: 30px;
-            color: #34495e;
+            margin-top: 40px;
             font-size: 1.5em;
+            font-weight: 700;
         }
         p {
             margin: 20px 0;
@@ -48,79 +56,65 @@
             color: #555;
         }
         ul, ol {
-            margin: 20px 40px;
+            margin: 20px 20px;
+            padding-left: 20px;
         }
         li {
             margin-bottom: 12px;
             font-size: 1em;
         }
         code {
-            background-color: #ecf0f1;
+            background-color: #f5f5f5;
             padding: 2px 6px;
-            font-family: monospace;
+            font-family: 'Courier New', Courier, monospace;
             border-radius: 4px;
         }
         pre {
-            background-color: #ecf0f1;
+            background-color: #f5f5f5;
             padding: 15px;
             overflow-x: auto;
             border-radius: 6px;
             margin: 20px 0;
         }
         a {
-            color: #2980b9;
+            color: #007acc;
             text-decoration: none;
         }
         a:hover {
             text-decoration: underline;
         }
-        .keywords {
-            background-color: #2980b9;
-            color: #fff;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 8px;
+        figure {
+            width: 90%; /* Reduced from 100% */
+            max-width: 600px; /* Reduced from 800px */
+            margin: 30px auto; /* Reduced top and bottom margin */
         }
-        .keywords h3 {
-            margin-top: 0;
-        }
-        .image-placeholder {
-            width: 100%;
-            max-width: 800px;
-            height: auto;
-            margin: 30px auto;
-            display: block;
-            border: 2px solid #bdc3c7;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        .image-placeholder img {
+        figure img {
             width: 100%;
             height: auto;
             display: block;
+            border-radius: 4px;
         }
-        .image-placeholder p {
+        figcaption {
             text-align: center;
-            padding: 10px;
-            background-color: #bdc3c7;
-            color: #7f8c8d;
-            margin: 0;
             font-size: 0.9em;
+            color: #888;
+            margin-top: 8px;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
+            margin: 30px 0;
             font-size: 1em;
         }
         table th, table td {
-            border: 1px solid #bdc3c7;
+            border: 1px solid #e0e0e0;
             padding: 12px;
             text-align: center;
         }
         table th {
-            background-color: #2980b9;
-            color: #fff;
+            background-color: #f5f5f5;
+            color: #333;
+            font-weight: 700;
         }
         @media (max-width: 768px) {
             .container {
@@ -128,13 +122,17 @@
                 padding: 20px;
             }
             h1 {
-                font-size: 2.2em;
+                font-size: 2em;
             }
             h2 {
-                font-size: 1.8em;
+                font-size: 1.6em;
             }
             h3 {
                 font-size: 1.3em;
+            }
+            figure {
+                width: 100%; /* Adjust to full width on smaller screens */
+                max-width: none;
             }
         }
     </style>
@@ -193,28 +191,28 @@
         <li><strong>Answer Generation:</strong> The LLM analyzes the refined context and generates a precise, contextually appropriate answer.</li>
     </ol>
 
-    <div class="image-placeholder">
+    <figure>
         <img src="images/biwibot1.png" alt="Chatbot UI with Example Conversation">
-        <p>Figure 1: Chatbot UI with Example Conversation</p>
-    </div>
+        <figcaption>Figure 1: Chatbot UI with Example Conversation</figcaption>
+    </figure>
 
     <h2>Learning Material Indexing</h2>
 
     <p>The effectiveness of the BiWi AI Tutor relies heavily on its ability to retrieve relevant course materials efficiently. The indexing process involves parsing course PDFs into structured formats, dividing the content into manageable chunks, and creating both semantic and keyword-based indices. This ensures that the chatbot can access and utilize the most pertinent sections of the course material to provide accurate responses.</p>
 
-    <div class="image-placeholder">
+    <figure>
         <img src="images/Block_Complete_2_v2.png" alt="Learning Material Indexing Process">
-        <p>Figure 2: Learning Material Indexing Process</p>
-    </div>
+        <figcaption>Figure 2: Learning Material Indexing Process</figcaption>
+    </figure>
 
     <h2>Chatbot Interaction Flow</h2>
 
     <p>The interaction flow of the chatbot ensures that students receive accurate and timely responses. From receiving a query to generating an answer, each step is meticulously designed to maintain context and relevance. This flow integrates the indexing and retrieval processes to provide seamless and contextually rich interactions.</p>
 
-    <div class="image-placeholder">
+    <figure>
         <img src="images/Block_Complete_1_v2.png" alt="Chatbot Interaction Flow">
-        <p>Figure 3: Chatbot Interaction Flow</p>
-    </div>
+        <figcaption>Figure 3: Chatbot Interaction Flow</figcaption>
+    </figure>
 
     <h2>Evaluation of the Chatbot</h2>
 
